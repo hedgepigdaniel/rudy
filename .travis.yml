@@ -27,6 +27,13 @@ deploy:
   - provider: script
     skip_cleanup: true
     on:
+      branch: next
+    script:
+      yarn run lerna publish prerelease --preid alpha --dist-tag alpha --exact
+      --no-conventional-commits --yes
+  - provider: script
+    skip_cleanup: true
+    on:
       all_branches: true
     script:
       yarn run lerna publish --canary --dist-tag "git-$TRAVIS_BRANCH" --preid

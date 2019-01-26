@@ -11,17 +11,16 @@ notifications:
     on_failure: always
     on_start: never
 before_script:
-  - yarn run build # This is necessary for the integration tests
+  - yarn run build
 script:
   - yarn run check
 deploy:
-  # Deploy all non publish-* branches to canary dist tags/labels per branch
   - provider: script
     on:
       condition: '"$TRAVIS_BRANCH" != "publish-"*'
-    script: yarn run lerna run publish --canary --dist-tag "git#$TRAVIS_BRANCH" --preid "git#$TRAVIS_BRANCH"
-
-  # Publish master to the `next` dist tag with an `alpha` label
+    script:
+      yarn run lerna run publish --canary --dist-tag "git#$TRAVIS_BRANCH"
+      --preid "git#$TRAVIS_BRANCH"
   - provider: script
     on:
       branch: master
@@ -31,4 +30,5 @@ branches:
     - "/^v\\d+\\.\\d+\\.\\d+$/"
 env:
   global:
-    secure: fYMRcjaJNA/YSGVk4ON5+s5zRBF/0e0cCnjamoSa9dQzSBVm7yyv2RE14j8OxBZ0sn+9TwByS9Ith1kKiJk74Ce2JaSw2rpbPE3CivTz8u5e5l9D9z4Wmlg+WlWKUDMvNZknc/02aOxqIW5c8O5f5GYCTvx7Tgfw3TbDJ9Z58RlKDYj0oJwWm//xUykYl9gO1s7ikBOVdLj9eoLZj0ckEGM/l1bXdLaWwl+r4vzIAF4FsOBRa3I4fEONwU67LEngbP/tHahW/4iGiE53owBTtvXRkmofrdtUihRegYWKBlCyUjokqXLKlf3IivC17Pbo6IM5atmp0R5ReH1j6WIhiMk5xvas1mjYFvJK8Se7KKtCE0cymqiqYvFgD0bJdnUaJ7pwSVUPbFMUmO6Jd8wOsxkdwqzuAkXKnG1QM7PjPxnoiiANZWdzio51qe1gv8gnZtO2NgbTvCdRCpo8aJ4y4ve1LZ9TMBpZl4lGo9UroM8NygjOonOaZcWDow4uZSEEPXtGPQQCUk/yzV5Ey5TAv8izJrQ9W5j3l8OfnlQCqgUzuFPqdWSIdd4dIeUxN4XDIKhJpUBZH/I5AN9p2ow9lCI/RFrhfp8OHDg1HYQupWmHzTLNdk0JCyMuyIDsvOXtWI8cFb0hVE8qzu9FoQ5pwz5B3a/9fsWipWRMHzlxCEA=
+    - secure: fYMRcjaJNA/YSGVk4ON5+s5zRBF/0e0cCnjamoSa9dQzSBVm7yyv2RE14j8OxBZ0sn+9TwByS9Ith1kKiJk74Ce2JaSw2rpbPE3CivTz8u5e5l9D9z4Wmlg+WlWKUDMvNZknc/02aOxqIW5c8O5f5GYCTvx7Tgfw3TbDJ9Z58RlKDYj0oJwWm//xUykYl9gO1s7ikBOVdLj9eoLZj0ckEGM/l1bXdLaWwl+r4vzIAF4FsOBRa3I4fEONwU67LEngbP/tHahW/4iGiE53owBTtvXRkmofrdtUihRegYWKBlCyUjokqXLKlf3IivC17Pbo6IM5atmp0R5ReH1j6WIhiMk5xvas1mjYFvJK8Se7KKtCE0cymqiqYvFgD0bJdnUaJ7pwSVUPbFMUmO6Jd8wOsxkdwqzuAkXKnG1QM7PjPxnoiiANZWdzio51qe1gv8gnZtO2NgbTvCdRCpo8aJ4y4ve1LZ9TMBpZl4lGo9UroM8NygjOonOaZcWDow4uZSEEPXtGPQQCUk/yzV5Ey5TAv8izJrQ9W5j3l8OfnlQCqgUzuFPqdWSIdd4dIeUxN4XDIKhJpUBZH/I5AN9p2ow9lCI/RFrhfp8OHDg1HYQupWmHzTLNdk0JCyMuyIDsvOXtWI8cFb0hVE8qzu9FoQ5pwz5B3a/9fsWipWRMHzlxCEA=
+    - secure: TWYDjBeK3L4rZfptfvf6YITUGEiLG+E7kvd4Siw1pDbbofnudgNr2EcFWtplxOQgd+yl6hLzgqLkCibpX7abc3p8yzi0NxedKKEnweqxfOSwjJ/bfzcVkXAdOe/w/hc1kHRO1BExU8ZO09xxCqMOZtZEgKeQjMuAKdh90D+HrKbrXL+fgBHMgGQrUvtf3MylL2zYfA/rmY5s42N1z8AFpNmYUy+H/LmPLapoSOENJRwe/6MTKgt3WEaX06loXnO6uRo/1t3uYjPaquJqfcdgqks/u/DvKJ9YINrsF/UDyWuVAniDCu/1rDjMJwMEXBQNKNuB4ZzDZt3cEcsjY5Xsa9Rsab8kR9LlH+Kvzm4WqPC+L8WZVL4qTc+L9EkIEN5fFo4fc4Nnsc2jY1JrT+fyoBTRrDon6xaWFqTaXGESX1mXytBA6saqOOBLnpzpw40rkdE6ySVtgYn0OiSAvTWTOuR8yyqOOg4M1TVQ8ZrYw/UmYCmlxA7FA82HJXk5m3DENpPU7KgLQy+6ncysc4OJjbj/D0CkrC36UY6uVx9xf+bIzS6Ctwjo0pIj3JBu6S68gNuQjr9RssA0o9W9DYiZxZCa+R+kLGW/jPo7DIKDE68EAa9SNOlcMg5KqoJgCaJPlAuvVWepUH/ZA2FwLlMXWlUgjSIRZpvZGtvJX/2ZoKo= # SNYK_TOKEN

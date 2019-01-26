@@ -35,7 +35,7 @@ deploy:
   - provider: script
     skip_cleanup: true
     on:
-      condition: '"$TRAVIS_BRANCH" != "publish-"*'
+      all_branches: true
     script:
       yarn run lerna publish --canary --dist-tag "git#$TRAVIS_BRANCH" --preid
       "git#$TRAVIS_BRANCH" --yes

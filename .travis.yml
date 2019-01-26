@@ -10,6 +10,9 @@ notifications:
     on_success: always
     on_failure: always
     on_start: never
+before_install:
+  - git checkout "$TRAVIS_BRANCH"
+  - test $(git rev-list HEAD --max-count=1) == "$TRAVIS_COMMIT"
 before_script:
   - yarn run build
 script:

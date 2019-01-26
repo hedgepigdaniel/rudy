@@ -19,8 +19,7 @@ before_install:
   - chmod 600 github_deploy_key
   - eval $(ssh-agent -s)
   - ssh-add github_deploy_key
-  - git remote set-url origin $(echo $(git remote get-url origin) | sed
-    's/^[a-z]*:\/\/\([a-z.]*\)\/\(.*\)\/$/git@\1:\2/')
+  - git remote set-url origin "git@github.com:${TRAVIS_REPO_SLUG}.git"
 before_script:
   - yarn run build
 script:

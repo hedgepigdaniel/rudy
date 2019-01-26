@@ -11,16 +11,7 @@ notifications:
     on_failure: always
     on_start: never
 before_install:
-  - if [ -z "$TRAVIS_PULL_REQUEST_BRANCH" ]; then git checkout "$TRAVIS_BRANCH";
-    else git checkout "$TRAVIS_PULL_REQUEST_BRANCH"; fi;
-  - test $(git rev-list HEAD --max-count=1) == "$TRAVIS_COMMIT"
-  - openssl aes-256-cbc -K $encrypted_64b59bdd3d91_key -iv
-    $encrypted_64b59bdd3d91_iv -in github_deploy_key.enc -out github_deploy_key
-    -d
-  - chmod 600 github_deploy_key
-  - eval $(ssh-agent -s)
-  - ssh-add github_deploy_key
-  - git remote set-url origin "git@github.com:${TRAVIS_REPO_SLUG}.git"
+  - bash scripts/prepare_git_release.sh
 before_script:
   - yarn run build
 script:
@@ -32,14 +23,14 @@ deploy:
     skip_cleanup: true
     on:
       branch: master
-    script: yarn run lerna publish --dist-tag next --preid alpha --yes
+    script: yarn run lerna publish --yes
   - provider: script
     skip_cleanup: true
     on:
       all_branches: true
     script:
       yarn run lerna publish --canary --dist-tag "git-$TRAVIS_BRANCH" --preid
-      "git-$TRAVIS_BRANCH" --yes --force-publish
+      "git-$TRAVIS_BRANCH" --yes --force-publish --exact
 branches:
   except:
     - "/^v\\d+\\.\\d+\\.\\d+$/"

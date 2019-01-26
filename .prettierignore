@@ -22,6 +22,7 @@ lerna-debug.log
 *.env
 *.enc
 *.pub
+*.sh
 
 # Ignored dirs in sub packages
 packages/*/

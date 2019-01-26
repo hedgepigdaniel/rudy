@@ -9,11 +9,14 @@ notifications:
   webhooks:
     urls:
       - https://webhooks.gitter.im/e/5156be73e058008e1ed2
-    on_success: always # options: [always|never|change] default: always
-    on_failure: always # options: [always|never|change] default: always
-    on_start: never # options: [always|never|change] default: always
+    on_success: always
+    on_failure: always
+    on_start: never
 after_success:
   - npm run semantic-release
 branches:
   except:
-    - /^v\d+\.\d+\.\d+$/
+    - "/^v\\d+\\.\\d+\\.\\d+$/"
+env:
+  global:
+    secure: fYMRcjaJNA/YSGVk4ON5+s5zRBF/0e0cCnjamoSa9dQzSBVm7yyv2RE14j8OxBZ0sn+9TwByS9Ith1kKiJk74Ce2JaSw2rpbPE3CivTz8u5e5l9D9z4Wmlg+WlWKUDMvNZknc/02aOxqIW5c8O5f5GYCTvx7Tgfw3TbDJ9Z58RlKDYj0oJwWm//xUykYl9gO1s7ikBOVdLj9eoLZj0ckEGM/l1bXdLaWwl+r4vzIAF4FsOBRa3I4fEONwU67LEngbP/tHahW/4iGiE53owBTtvXRkmofrdtUihRegYWKBlCyUjokqXLKlf3IivC17Pbo6IM5atmp0R5ReH1j6WIhiMk5xvas1mjYFvJK8Se7KKtCE0cymqiqYvFgD0bJdnUaJ7pwSVUPbFMUmO6Jd8wOsxkdwqzuAkXKnG1QM7PjPxnoiiANZWdzio51qe1gv8gnZtO2NgbTvCdRCpo8aJ4y4ve1LZ9TMBpZl4lGo9UroM8NygjOonOaZcWDow4uZSEEPXtGPQQCUk/yzV5Ey5TAv8izJrQ9W5j3l8OfnlQCqgUzuFPqdWSIdd4dIeUxN4XDIKhJpUBZH/I5AN9p2ow9lCI/RFrhfp8OHDg1HYQupWmHzTLNdk0JCyMuyIDsvOXtWI8cFb0hVE8qzu9FoQ5pwz5B3a/9fsWipWRMHzlxCEA=

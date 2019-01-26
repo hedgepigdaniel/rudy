@@ -7,4 +7,4 @@ export { default as anonymousThunk } from './anonymousThunk'
 export { default as serverRedirect } from './serverRedirect'
 export {
   default as changePageTitle,
-} from '@respond-framework/middleware-change-page-title'
+} from '@respond-framework-test/middleware-change-page-title'

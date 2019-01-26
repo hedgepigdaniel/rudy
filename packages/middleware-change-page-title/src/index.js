@@ -1,7 +1,7 @@
 import {
   isServer as defaultIsServer,
   createSelector as defaultCreateSelector,
-} from '@respond-framework/utils'
+} from '@respond-framework-test/utils'
 
 export default (options) => {
   const {

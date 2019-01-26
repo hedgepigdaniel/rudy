@@ -42,7 +42,7 @@ export default (env) => {
         {
           test: /\.jsx?$/,
           // Skip node_modules, with the exception of packages in the monorepo
-          exclude: /[\\/]node_modules[\\/](?!@respond-framework)/,
+          exclude: /[\\/]node_modules[\\/](?!@respond-framework-test)/,
           use: {
             loader: 'babel-loader',
             options: {
@@ -64,7 +64,7 @@ export default (env) => {
           },
         },
         {
-          test: /node_modules\/@respond-framework\//,
+          test: /node_modules\/@respond-framework-test\//,
           enforce: 'pre',
           use: 'source-map-loader',
         },

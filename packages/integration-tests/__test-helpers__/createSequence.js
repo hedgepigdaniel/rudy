@@ -1,6 +1,6 @@
 import { applyMiddleware, createStore, combineReducers } from 'redux'
-import { createRouter, createScene } from '@respond-framework/rudy/src'
-import { NOT_FOUND } from '@respond-framework/rudy/src/types'
+import { createRouter, createScene } from '@respond-framework-test/rudy/src'
+import { NOT_FOUND } from '@respond-framework-test/rudy/src/types'
 
 import fakeAsyncWork from './fakeAsyncWork'
 

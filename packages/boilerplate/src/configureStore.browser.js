@@ -16,7 +16,7 @@ import {
   setHash,
   setBasename,
   createRouter,
-} from '@respond-framework/rudy'
+} from '@respond-framework-test/rudy'
 
 import routes from './routes'
 import * as reducers from './reducers'

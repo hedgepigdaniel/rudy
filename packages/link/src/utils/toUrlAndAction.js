@@ -5,8 +5,8 @@ import {
   toAction,
   findBasename,
   stripBasename,
-} from '@respond-framework/rudy'
-import type { Routes, Options } from '@respond-framework/rudy'
+} from '@respond-framework-test/rudy'
+import type { Routes, Options } from '@respond-framework-test/rudy'
 
 export type To = string | Array<string> | Object
 

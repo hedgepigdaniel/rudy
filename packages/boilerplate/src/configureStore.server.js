@@ -1,4 +1,4 @@
-import { doesRedirect } from '@respond-framework/rudy'
+import { doesRedirect } from '@respond-framework-test/rudy'
 import configureStore from './configureStore.browser'
 
 export default async (req, res) => {

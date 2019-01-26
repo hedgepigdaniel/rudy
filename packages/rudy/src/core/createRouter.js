@@ -22,7 +22,7 @@ import {
   onError as defaultOnError,
 } from '../utils'
 
-import { createSelector } from '@respond-framework/utils'
+import { createSelector } from '@respond-framework-test/utils'
 
 import {
   serverRedirect,

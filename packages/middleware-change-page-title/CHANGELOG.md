@@ -5,4 +5,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 1.0.1-test.0 (2018-11-05)
 
-**Note:** Version bump only for package @respond-framework/middleware-change-page-title
+**Note:** Version bump only for package @respond-framework-test/middleware-change-page-title

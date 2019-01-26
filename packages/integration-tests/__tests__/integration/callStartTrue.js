@@ -2,9 +2,9 @@ import {
   transformAction,
   call,
   enter,
-} from '@respond-framework/rudy/src/middleware'
+} from '@respond-framework-test/rudy/src/middleware'
 
-import { compose } from '@respond-framework/rudy/src/core'
+import { compose } from '@respond-framework-test/rudy/src/core'
 import createTest from '../../__helpers__/createTest'
 
 createTest('call({ start: true })', {

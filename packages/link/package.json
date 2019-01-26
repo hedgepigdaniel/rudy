@@ -1,5 +1,5 @@
 {
-  "name": "@respond-framework/link",
+  "name": "@respond-framework-test/link",
   "version": "0.1.1-test.0",
   "description": "React component to create links which dispatch rudy routing actions",
   "main": "cjs/index.js",
@@ -33,7 +33,7 @@
     "resolve-pathname": "^2.2.0"
   },
   "peerDependencies": {
-    "@respond-framework/rudy": "^0.1.0",
+    "@respond-framework-test/rudy": "^0.1.0",
     "prop-types": "^15.6.2",
     "react": "^15 || ^16",
     "react-redux": "^5.0.7",

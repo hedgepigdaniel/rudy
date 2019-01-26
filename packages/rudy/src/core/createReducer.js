@@ -1,7 +1,7 @@
 // @flow
 import { ADD_ROUTES, BLOCK, UNBLOCK, SET_FROM } from '../types'
 import { typeToScene, isNotFound } from '../utils'
-import { isServer } from '@respond-framework/utils'
+import { isServer } from '@respond-framework-test/utils'
 
 import type {
   LocationState,

@@ -1,5 +1,5 @@
 import { applyMiddleware, combineReducers, compose, createStore } from 'redux'
-import { createRouter } from '@respond-framework/rudy'
+import { createRouter } from '@respond-framework-test/rudy'
 
 import routes from './routes'
 import page from './pageReducer'

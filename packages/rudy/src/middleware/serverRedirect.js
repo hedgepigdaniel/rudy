@@ -1,5 +1,5 @@
 // @flow
-import { isServer } from '@respond-framework/utils'
+import { isServer } from '@respond-framework-test/utils'
 import { isRedirect, actionToUrl } from '../utils'
 import type { Redirect } from '../flow-types'
 

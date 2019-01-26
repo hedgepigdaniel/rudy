@@ -5,8 +5,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import type { Connector } from 'react-redux'
 
-import { matchUrl, urlToLocation } from '@respond-framework/rudy'
-import type { ReceivedAction } from '@respond-framework/rudy'
+import { matchUrl, urlToLocation } from '@respond-framework-test/rudy'
+import type { ReceivedAction } from '@respond-framework-test/rudy'
 
 import { toUrlAndAction, handlePress, preventDefault } from './utils'
 import type { To, OnClick } from './utils'

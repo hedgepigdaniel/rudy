@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware, combineReducers } from 'redux'
-import createRouter from '@respond-framework/rudy/src/core/createRouter'
+import createRouter from '@respond-framework-test/rudy/src/core/createRouter'
 
 export default async (
   path = '/',

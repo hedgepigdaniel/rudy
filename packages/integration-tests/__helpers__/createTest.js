@@ -2,9 +2,9 @@ import { applyMiddleware, createStore, combineReducers } from 'redux'
 import {
   get,
   clear,
-} from '@respond-framework/rudy/src/history/utils/sessionStorage'
-import { locationToUrl } from '@respond-framework/rudy/src/utils'
-import { createRouter } from '@respond-framework/rudy/src'
+} from '@respond-framework-test/rudy/src/history/utils/sessionStorage'
+import { locationToUrl } from '@respond-framework-test/rudy/src/utils'
+import { createRouter } from '@respond-framework-test/rudy/src'
 import awaitUrlChange from './awaitUrlChange'
 
 export default async (...allArgs) => {

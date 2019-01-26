@@ -3,9 +3,9 @@ import {
   createHistory,
   createRequest,
   createReducer,
-} from '@respond-framework/rudy/src/core'
-import shouldTransition from '@respond-framework/rudy/src/utils/shouldTransition'
-import shouldCall from '@respond-framework/rudy/src/middleware/call/utils/shouldCall'
+} from '@respond-framework-test/rudy/src/core'
+import shouldTransition from '@respond-framework-test/rudy/src/utils/shouldTransition'
+import shouldCall from '@respond-framework-test/rudy/src/middleware/call/utils/shouldCall'
 import createTest from '../../__helpers__/createTest'
 
 createTest(

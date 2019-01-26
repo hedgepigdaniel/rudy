@@ -1,5 +1,5 @@
 {
-  "name": "@respond-framework/utils",
+  "name": "@respond-framework-test/utils",
   "version": "0.1.1-test.0",
   "description": "Shared utilities for rudy",
   "main": "cjs/index.js",

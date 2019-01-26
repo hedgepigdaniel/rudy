@@ -1,5 +1,5 @@
 {
-  "name": "@respond-framework/boilerplate",
+  "name": "@respond-framework-test/boilerplate",
   "description": "Universal Rudy Demo",
   "version": "0.1.1-test.0",
   "main": "server/index.js",
@@ -23,8 +23,8 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
-    "@respond-framework/link": "^0.1.1-test.0",
-    "@respond-framework/rudy": "^0.1.1-test.0",
+    "@respond-framework-test/link": "^0.1.1-test.0",
+    "@respond-framework-test/rudy": "^0.1.1-test.0",
     "express": "^4.15.2",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",

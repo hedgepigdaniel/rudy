@@ -1,5 +1,5 @@
 // @flow
-import { isServer } from '@respond-framework/utils'
+import { isServer } from '@respond-framework-test/utils'
 
 export default (req: Object): boolean => {
   const { universal } = req.getLocation()

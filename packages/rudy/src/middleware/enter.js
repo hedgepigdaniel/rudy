@@ -1,4 +1,4 @@
-import { isServer } from '@respond-framework/utils'
+import { isServer } from '@respond-framework-test/utils'
 import { redirectShortcut } from '../utils'
 
 export default (api) => async (req, next) => {

@@ -29,7 +29,7 @@ path params and query strings are handled as action payloads.
 
 ### Install
 
-`yarn add @respond-framework/rudy`
+`yarn add @respond-framework-test/rudy`
 
 ### Basic example for React
 
@@ -95,7 +95,7 @@ export default (state = 'Home', action = {}) => components[action.type] || state
 // Both arguments in the exported function are optional.
 
 import { applyMiddleware, combineReducers, compose, createStore } from 'redux'
-import { createRouter } from '@respond-framework/rudy'
+import { createRouter } from '@respond-framework-test/rudy'
 
 import routes from './routes'
 import page from './pageReducer'

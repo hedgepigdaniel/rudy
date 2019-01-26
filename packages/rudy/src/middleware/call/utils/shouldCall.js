@@ -1,6 +1,6 @@
 // @flow
 import type { LocationState } from '../../../flow-types'
-import { isServer } from '@respond-framework/utils'
+import { isServer } from '@respond-framework-test/utils'
 import { isHydrate } from '../../../utils'
 
 export default (name, route, req) => {

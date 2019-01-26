@@ -16,7 +16,7 @@
     "vulnerabilities": "mkdir node_modules; snyk test"
   },
   "dependencies": {
-    "@respond-framework/rudy": "^0.1.1-test.0",
+    "@respond-framework-test/rudy": "^0.1.1-test.0",
     "react": "^16.4.2",
     "react-redux": "^5.0.7",
     "react-test-renderer": "^16.4.2",

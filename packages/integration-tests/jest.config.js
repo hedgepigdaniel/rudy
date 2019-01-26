@@ -11,5 +11,7 @@ module.exports = {
   setupFiles: ['jest-localstorage-mock'],
   moduleFileExtensions: ['js'],
   testPathIgnorePatterns: ['/node_modules/', '.eslintrc.js'],
-  transformIgnorePatterns: ['<rootDir>/node_modules/(?!@respond-framework)'],
+  transformIgnorePatterns: [
+    '<rootDir>/node_modules/(?!@respond-framework-test)',
+  ],
 }

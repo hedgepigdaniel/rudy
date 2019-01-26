@@ -20,6 +20,8 @@ lerna-debug.log
 *.snap
 *.log
 *.env
+*.enc
+*.pub
 
 # Ignored dirs in sub packages
 packages/*/

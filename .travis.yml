@@ -20,15 +20,15 @@ deploy:
   - provider: script
     skip_cleanup: true
     on:
-      condition: '"$TRAVIS_BRANCH" != "publish-"*'
-    script:
-      yarn run lerna publish --canary --dist-tag "git#$TRAVIS_BRANCH" --preid
-      "git#$TRAVIS_BRANCH"
+      branch: master
+    script: yarn run lerna publish --dist-tag next --preid alpha --yes
   - provider: script
     skip_cleanup: true
     on:
-      branch: master
-    script: yarn run lerna publish --dist-tag next --preid alpha
+      condition: '"$TRAVIS_BRANCH" != "publish-"*'
+    script:
+      yarn run lerna publish --canary --dist-tag "git#$TRAVIS_BRANCH" --preid
+      --yes "git#$TRAVIS_BRANCH"
 branches:
   except:
     - "/^v\\d+\\.\\d+\\.\\d+$/"

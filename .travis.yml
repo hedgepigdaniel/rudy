@@ -19,8 +19,8 @@ deploy:
     on:
       condition: '"$TRAVIS_BRANCH" != "publish-"*'
     script:
-      yarn && yarn run lerna publish --canary --dist-tag "git#$TRAVIS_BRANCH" --preid
-      "git#$TRAVIS_BRANCH"
+      yarn && yarn run lerna publish --canary --dist-tag "git#$TRAVIS_BRANCH"
+      --preid "git#$TRAVIS_BRANCH"
   - provider: script
     on:
       branch: master

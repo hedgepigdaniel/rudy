@@ -37,8 +37,8 @@ deploy:
     on:
       all_branches: true
     script:
-      yarn run lerna publish --canary --dist-tag "git#$TRAVIS_BRANCH" --preid
-      "git#$TRAVIS_BRANCH" --yes
+      yarn run lerna publish --canary --dist-tag "git+$TRAVIS_BRANCH" --preid
+      "git+$TRAVIS_BRANCH" --yes
 branches:
   except:
     - "/^v\\d+\\.\\d+\\.\\d+$/"

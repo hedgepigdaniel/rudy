@@ -19,10 +19,10 @@ before_install:
   - chmod 600 github_deploy_key
   - eval $(ssh-agent -s)
   - ssh-add github_deploy_key
-# before_script:
-#   - yarn run build
-# script:
-#   - yarn run check
+before_script:
+  - yarn run build
+script:
+  - yarn run check
 before_deploy:
   - echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
 deploy:

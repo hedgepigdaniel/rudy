@@ -2,18 +2,30 @@ language: node_js
 node_js:
   - stable
 cache: yarn
-script:
-  - yarn run check
 notifications:
   email: false
   webhooks:
     urls:
       - https://webhooks.gitter.im/e/5156be73e058008e1ed2
-    on_success: always # options: [always|never|change] default: always
-    on_failure: always # options: [always|never|change] default: always
-    on_start: never # options: [always|never|change] default: always
-after_success:
-  - npm run semantic-release
+    on_success: always
+    on_failure: always
+    on_start: never
+before_script:
+  - yarn run build # This is necessary for the integration tests
+script:
+  - yarn run check
+deploy:
+  # Deploy all non publish-* branches to canary dist tags/labels per branch
+  - provider: script
+    on:
+      condition: '"$TRAVIS_BRANCH" != "publish-"*'
+    script: yarn run lerna run publish --canary --dist-tag "git#$TRAVIS_BRANCH" --preid "git#$TRAVIS_BRANCH"
+
+  # Publish master to the `next` dist tag with an `alpha` label
+  - provider: script
+    on:
+      branch: master
+    script: yarn run lerna run publish --dist-tag next --preid alpha
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/

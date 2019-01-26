@@ -16,19 +16,21 @@ script:
   - yarn run check
 deploy:
   - provider: script
+    skip_cleanup: true
     on:
       condition: '"$TRAVIS_BRANCH" != "publish-"*'
     script:
-      yarn && yarn run lerna publish --canary --dist-tag "git#$TRAVIS_BRANCH"
-      --preid "git#$TRAVIS_BRANCH"
+      yarn run lerna publish --canary --dist-tag "git#$TRAVIS_BRANCH" --preid
+      "git#$TRAVIS_BRANCH"
   - provider: script
+    skip_cleanup: true
     on:
       branch: master
-    script: yarn && yarn run lerna publish --dist-tag next --preid alpha
+    script: yarn run lerna publish --dist-tag next --preid alpha
 branches:
   except:
     - "/^v\\d+\\.\\d+\\.\\d+$/"
 env:
   global:
-    - secure: fYMRcjaJNA/YSGVk4ON5+s5zRBF/0e0cCnjamoSa9dQzSBVm7yyv2RE14j8OxBZ0sn+9TwByS9Ith1kKiJk74Ce2JaSw2rpbPE3CivTz8u5e5l9D9z4Wmlg+WlWKUDMvNZknc/02aOxqIW5c8O5f5GYCTvx7Tgfw3TbDJ9Z58RlKDYj0oJwWm//xUykYl9gO1s7ikBOVdLj9eoLZj0ckEGM/l1bXdLaWwl+r4vzIAF4FsOBRa3I4fEONwU67LEngbP/tHahW/4iGiE53owBTtvXRkmofrdtUihRegYWKBlCyUjokqXLKlf3IivC17Pbo6IM5atmp0R5ReH1j6WIhiMk5xvas1mjYFvJK8Se7KKtCE0cymqiqYvFgD0bJdnUaJ7pwSVUPbFMUmO6Jd8wOsxkdwqzuAkXKnG1QM7PjPxnoiiANZWdzio51qe1gv8gnZtO2NgbTvCdRCpo8aJ4y4ve1LZ9TMBpZl4lGo9UroM8NygjOonOaZcWDow4uZSEEPXtGPQQCUk/yzV5Ey5TAv8izJrQ9W5j3l8OfnlQCqgUzuFPqdWSIdd4dIeUxN4XDIKhJpUBZH/I5AN9p2ow9lCI/RFrhfp8OHDg1HYQupWmHzTLNdk0JCyMuyIDsvOXtWI8cFb0hVE8qzu9FoQ5pwz5B3a/9fsWipWRMHzlxCEA=
     - secure: TWYDjBeK3L4rZfptfvf6YITUGEiLG+E7kvd4Siw1pDbbofnudgNr2EcFWtplxOQgd+yl6hLzgqLkCibpX7abc3p8yzi0NxedKKEnweqxfOSwjJ/bfzcVkXAdOe/w/hc1kHRO1BExU8ZO09xxCqMOZtZEgKeQjMuAKdh90D+HrKbrXL+fgBHMgGQrUvtf3MylL2zYfA/rmY5s42N1z8AFpNmYUy+H/LmPLapoSOENJRwe/6MTKgt3WEaX06loXnO6uRo/1t3uYjPaquJqfcdgqks/u/DvKJ9YINrsF/UDyWuVAniDCu/1rDjMJwMEXBQNKNuB4ZzDZt3cEcsjY5Xsa9Rsab8kR9LlH+Kvzm4WqPC+L8WZVL4qTc+L9EkIEN5fFo4fc4Nnsc2jY1JrT+fyoBTRrDon6xaWFqTaXGESX1mXytBA6saqOOBLnpzpw40rkdE6ySVtgYn0OiSAvTWTOuR8yyqOOg4M1TVQ8ZrYw/UmYCmlxA7FA82HJXk5m3DENpPU7KgLQy+6ncysc4OJjbj/D0CkrC36UY6uVx9xf+bIzS6Ctwjo0pIj3JBu6S68gNuQjr9RssA0o9W9DYiZxZCa+R+kLGW/jPo7DIKDE68EAa9SNOlcMg5KqoJgCaJPlAuvVWepUH/ZA2FwLlMXWlUgjSIRZpvZGtvJX/2ZoKo= # SNYK_TOKEN
+    - secure: YhChLkNSiUfpoABwJ4tKhehjl9UtorhFYjI+wc2mQlKEmh5lMxggRwG4shgTNALIhxM7N6xQFbjEeQC28UlkdDc1fxeTKwiDhH9hpqkdoI9y0weVLDNRLEp2ap+BH3mELwTF3iVg5+9bXJ/ZRNEBdpwW7z4vjaG8ZSfHrdnnjukvqriXMzhIo8Tv3uulyjDY9G3o6TTcRlq3yjpCz5/M6OvBjOxWSxv6ljE9IrD5gaKv7nKePLiBoc4OAcmpLiMhBNELOukemmWsPhbZUOcTvGDkfpeqhSBraEZguNQy/9zXVLGPV/qNUjsJcU/veB721z3zZI6af7xl2vC7Rjm16MkCS1dNJWVHqGls06ayo1sn0Z2VlWsLzeykfF2erlGKR5bAivCJpj2qVUx94SrjwHwpFaOMaf6Ca527nl2PyVg3gjGPbcp6AAKpFybTnasn0knBp2ZMW9w+24Rhd8dL7rdrlxnyJ5DD/6yn2dWJ6BIUuaACUAHq+73rxy/A2hnS2pP52eBgjTq2jTxtkx56pBU4yvNT7DJ5yuLyQDTZdxe2QGcihP+TybGJPuiEbIrvhG7QhZmx70QcnbcCUOQV2GH61TMfw1yvbbT5H/N6MLUAgpFxBG04D5VxZLwQTBwJNUxlxyIvSH3RkQ5PBCriR+NDml0wlJfobP3aRi+h0N4= # NPM_TOKEN

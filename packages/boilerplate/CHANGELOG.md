@@ -5,6 +5,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.1.3 (2019-01-27)
 
+## [0.1.2](https://github.com/hedgepigdaniel/rudy/compare/@respond-framework-test/boilerplate@0.1.1...@respond-framework-test/boilerplate@0.1.2) (2019-01-26)
+
 **Note:** Version bump only for package @respond-framework-test/boilerplate
 
 

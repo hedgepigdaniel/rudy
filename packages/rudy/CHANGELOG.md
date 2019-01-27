@@ -9,6 +9,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### Features
 
 * **rudy:** add a feature ([6ccb965](https://github.com/faceyspacey/redux-first-router/commit/6ccb965))
+## [0.1.2](https://github.com/faceyspacey/redux-first-router/compare/@respond-framework-test/rudy@0.1.1...@respond-framework-test/rudy@0.1.2) (2019-01-26)
+
+**Note:** Version bump only for package @respond-framework-test/rudy
 
 
 

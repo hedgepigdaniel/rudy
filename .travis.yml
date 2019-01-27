@@ -10,14 +10,12 @@ notifications:
     on_success: always
     on_failure: always
     on_start: never
-before_install:
-  - bash scripts/prepare_git_release.sh
 before_script:
   - yarn run build
 script:
   - yarn run check
 before_deploy:
-  - echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
+  - bash scripts/prepare_git_release.sh
 deploy:
   - provider: script
     skip_cleanup: true

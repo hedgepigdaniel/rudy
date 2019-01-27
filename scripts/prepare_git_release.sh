@@ -18,6 +18,9 @@ if [ -z "$TRAVIS_PULL_REQUEST_BRANCH" ]; then
   # Set the git remtoe url to use SSH so that the deploy key is usable
   git remote set-url origin "git@github.com:${TRAVIS_REPO_SLUG}.git"
 
+  git pull
+  git push origin "$TRAVIS_BRANCH"
+
   # Put the NPM token in .npmrc so that it is usable
   echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
 fi;

@@ -15,7 +15,7 @@ notifications:
 script:
   - echo skip
 before_deploy:
-  - bash scripts/prepare_git_release.sh
+  - source scripts/prepare_git_release.sh
 deploy:
   - provider: script
     skip_cleanup: true

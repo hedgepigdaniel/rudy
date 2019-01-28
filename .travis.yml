@@ -33,6 +33,7 @@ deploy:
     skip_cleanup: true
     on:
       all_branches: true
+    if: tag IS blank
     script:
       yarn run lerna publish --canary --dist-tag "git-$TRAVIS_BRANCH" --preid
       "git-$TRAVIS_BRANCH" --yes --force-publish --exact

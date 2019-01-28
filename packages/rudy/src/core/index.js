@@ -8,5 +8,3 @@ export {
   createPrev,
   createPrevEmpty,
 } from './createReducer'
-
-// Very important code change

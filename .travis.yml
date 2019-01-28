@@ -28,7 +28,7 @@ deploy:
       all_branches: true
     script:
       yarn run lerna publish --canary --dist-tag "git-$TRAVIS_BRANCH" --preid
-      "git-$TRAVIS_BRANCH" --yes --force-publish --exact
+      "git-$TRAVIS_BRANCH" --yes --exact
 env:
   global:
     - secure: TWYDjBeK3L4rZfptfvf6YITUGEiLG+E7kvd4Siw1pDbbofnudgNr2EcFWtplxOQgd+yl6hLzgqLkCibpX7abc3p8yzi0NxedKKEnweqxfOSwjJ/bfzcVkXAdOe/w/hc1kHRO1BExU8ZO09xxCqMOZtZEgKeQjMuAKdh90D+HrKbrXL+fgBHMgGQrUvtf3MylL2zYfA/rmY5s42N1z8AFpNmYUy+H/LmPLapoSOENJRwe/6MTKgt3WEaX06loXnO6uRo/1t3uYjPaquJqfcdgqks/u/DvKJ9YINrsF/UDyWuVAniDCu/1rDjMJwMEXBQNKNuB4ZzDZt3cEcsjY5Xsa9Rsab8kR9LlH+Kvzm4WqPC+L8WZVL4qTc+L9EkIEN5fFo4fc4Nnsc2jY1JrT+fyoBTRrDon6xaWFqTaXGESX1mXytBA6saqOOBLnpzpw40rkdE6ySVtgYn0OiSAvTWTOuR8yyqOOg4M1TVQ8ZrYw/UmYCmlxA7FA82HJXk5m3DENpPU7KgLQy+6ncysc4OJjbj/D0CkrC36UY6uVx9xf+bIzS6Ctwjo0pIj3JBu6S68gNuQjr9RssA0o9W9DYiZxZCa+R+kLGW/jPo7DIKDE68EAa9SNOlcMg5KqoJgCaJPlAuvVWepUH/ZA2FwLlMXWlUgjSIRZpvZGtvJX/2ZoKo= # SNYK_TOKEN

@@ -4,7 +4,7 @@
   "useWorkspaces": true,
   "command": {
     "version": {
-      "allowBranch": ["master", "next"],
+      "allowBranch": ["master"],
       "conventionalCommits": true,
       "message": "chore(release): publish %s"
     }

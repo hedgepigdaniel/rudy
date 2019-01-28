@@ -1,6 +1,10 @@
 # Publishing new versions
 
-Publishing is done with lerna:
+Publishing is done with lerna and is done automatically when new code is pushed
+to the master branch.
+
+To cut manual releases (e.g. to manually bump the version on a pre release
+branch), you can do the following:
 
 ```shell
 $ yarn run lerna publish

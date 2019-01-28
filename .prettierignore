@@ -14,6 +14,7 @@ LICENSE
 yarn.lock
 yarn-error.log
 lerna-debug.log
+lerna.json
 
 # Ignored extensions
 *.png

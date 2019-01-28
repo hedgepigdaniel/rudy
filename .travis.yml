@@ -1,5 +1,7 @@
 language: node_js
 if: tag IS blank
+notifications:
+  email: false
 node_js:
   - stable
 cache: yarn

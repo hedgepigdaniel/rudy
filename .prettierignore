@@ -8,12 +8,14 @@
 **/.snyk
 **/.flowconfig
 **/.npmignore
+**/CHANGELOG.md
 
 # Ignored packages outside sub packages
 LICENSE
 yarn.lock
 yarn-error.log
 lerna-debug.log
+lerna.json
 
 # Ignored extensions
 *.png

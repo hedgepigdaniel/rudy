@@ -12,18 +12,15 @@ script:
 before_deploy:
   - source scripts/prepare_git_release.sh
 deploy:
+  # Make stable releases following the conventional commits specification
+  # when commits are pushed to master
   - provider: script
     skip_cleanup: true
     on:
       branch: master
     script: yarn run lerna publish --yes
-  - provider: script
-    skip_cleanup: true
-    on:
-      branch: next
-    script:
-      yarn run lerna publish prerelease --preid alpha --dist-tag alpha --exact
-      --yes
+  # Make canary releases tagged with git SHAs
+  # when commits are pushed to other branches
   - provider: script
     skip_cleanup: true
     on:

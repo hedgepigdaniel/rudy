@@ -12,15 +12,10 @@
 
 yarn-error.log
 lerna-debug.log
-.prettierignore
 *.png
 *.snap
 *.log
-*.lock
 *.ico
-*.pub
-*.enc
-*.sh
 
 # Ignored dirs in sub packages
 cjs/

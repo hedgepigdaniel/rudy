@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.4](https://github.com/faceyspacey/redux-first-router/compare/v0.1.4-alpha.4...v0.1.4) (2019-01-28)
+
+**Note:** Version bump only for package @respond-framework-test/rudy
+
+
+
+
+
 ## [0.1.4-alpha.4](https://github.com/faceyspacey/redux-first-router/compare/v0.1.4-alpha.3...v0.1.4-alpha.4) (2019-01-28)
 
 

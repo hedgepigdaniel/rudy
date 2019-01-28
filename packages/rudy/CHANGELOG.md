@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.4-alpha.5](https://github.com/faceyspacey/redux-first-router/compare/v0.1.4-alpha.4...v0.1.4-alpha.5) (2019-01-28)
+
+
+### Features
+
+* soemthing ([a286811](https://github.com/faceyspacey/redux-first-router/commit/a286811))
+
+
+
+
+
 ## [0.1.4-alpha.4](https://github.com/faceyspacey/redux-first-router/compare/v0.1.4-alpha.3...v0.1.4-alpha.4) (2019-01-28)
 
 

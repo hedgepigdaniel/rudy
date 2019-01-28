@@ -29,6 +29,16 @@
     "lint": "eslint --ignore-path ../../.eslintignore --ext=js,jsx .",
     "vulnerabilities": "mkdir node_modules; snyk test"
   },
+  "lint-staged": {
+    "*": [
+      "prettier --ignore-path=../../config/.prettierignore --write",
+      "git add"
+    ],
+    "*.{js,jsx}": [
+      "eslint --ignore-path ../../.eslintignore --ext=js,jsx --fix",
+      "git add"
+    ]
+  },
   "dependencies": {
     "resolve-pathname": "^2.2.0"
   },

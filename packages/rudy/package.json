@@ -26,6 +26,12 @@
     "lint": "eslint . || true",
     "vulnerabilities": "mkdir node_modules; snyk test"
   },
+  "lint-staged": {
+    "*": [
+      "prettier --ignore-path=../../config/.prettierignore --write",
+      "git add"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/faceyspacey/redux-first-router.git"
@@ -46,12 +52,5 @@
     "prop-types": "^15.6.0",
     "qs": "^6.5.1",
     "resolve-pathname": "^2.2.0"
-  },
-  "lint-staged": {
-    "*.js": [
-      "prettier --single-quote --parser=flow --semi=false --write",
-      "eslint --fix",
-      "git add"
-    ]
   }
 }

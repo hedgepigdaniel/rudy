@@ -25,12 +25,16 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "yarn run lint-staged && yarn run lerna run --concurrency 1 --stream lint-staged"
     }
   },
   "lint-staged": {
     "*": [
-      "prettier --ignore-path=config/.prettierignore --write",
+      "prettier --write",
+      "git add"
+    ],
+    "*.{js,jsx}": [
+      "eslint --ignore-pattern 'packages/*/**' --fix",
       "git add"
     ]
   },

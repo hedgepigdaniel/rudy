@@ -1,6 +1,6 @@
 {
   "name": "@respond-framework-test/rudy",
-  "version": "0.1.4-alpha.2",
+  "version": "0.1.4-alpha.3",
   "description": "think of your app in states not routes (and, yes, while keeping the address bar in sync)",
   "main": "dist/index.js",
   "module": "es/index.js",

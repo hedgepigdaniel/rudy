@@ -10,7 +10,7 @@ if [ -z "$TRAVIS_PULL_REQUEST_BRANCH" ]; then
   test $(git rev-list HEAD --max-count=1) == "$TRAVIS_COMMIT"
 
   # Decrypt the github deploy key and set it as the default key
-  openssl aes-256-cbc -K $encrypted_64b59bdd3d91_key -iv $encrypted_64b59bdd3d91_iv -in github_deploy_key.enc -out github_deploy_key -d
+  openssl aes-256-cbc -K $encrypted_f7f17cbc5492_key -iv $encrypted_f7f17cbc5492_iv -in github_deploy_key.enc -out github_deploy_key -d
   chmod 600 github_deploy_key
   eval $(ssh-agent -s)
   ssh-add github_deploy_key

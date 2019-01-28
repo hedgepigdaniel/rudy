@@ -18,6 +18,9 @@ lerna-debug.log
 *.log
 *.lock
 *.ico
+*.pub
+*.enc
+*.sh
 
 # Ignored dirs in sub packages
 cjs/

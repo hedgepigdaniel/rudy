@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1-from-git.1](https://github.com/respond-framework/rudy/compare/@respond-framework/boilerplate@0.1.1-test.4...@respond-framework/boilerplate@0.1.1-from-git.1) (2019-10-02)
+
+
+### Bug Fixes
+
+* **boilerplate:** allow scrolling the main container ([1eee48c](https://github.com/respond-framework/rudy/commit/1eee48c))
+
+
+
+
+
 ## [0.1.1-from-git.0](https://github.com/respond-framework/rudy/compare/@respond-framework/boilerplate@0.1.1-test.4...@respond-framework/boilerplate@0.1.1-from-git.0) (2019-10-01)
 
 

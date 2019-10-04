@@ -78,14 +78,22 @@ export type Location<Action extends FluxStandardRoutingAction> = LocationAction<
 /**
  * An instance of the Rudy API
  */
-export interface Api<Action extends FluxStandardRoutingAction> {
+export interface Api<
+  Action extends FluxStandardRoutingAction,
+  ScrollRestorer extends BaseScrollRestorer<Action> = BaseScrollRestorer<Action>
+> {
   getLocation: () => Location<Action>
+  scrollRestorer?: ScrollRestorer
+  options: Options<Action, ScrollRestorer>
 }
 
 /**
  * A Rudy request, associated with the dispatch of an FSRA
  */
-export type Request<Action extends FluxStandardRoutingAction> = {
+export type Request<
+  Action extends FluxStandardRoutingAction,
+  ScrollRestorer extends BaseScrollRestorer<Action> = BaseScrollRestorer<Action>,
+> = Api<Action, ScrollRestorer> & {
   /**
    * The redux action corresponding to the request. Before the
    * transformAction middleware, the action is an `Action`, whereas
@@ -99,9 +107,23 @@ export type Request<Action extends FluxStandardRoutingAction> = {
  * Rudy middleware which wraps and optionally changes the behaviour of
  * a request
  */
-export type Middleware<Action extends FluxStandardRoutingAction> = (
-  api: Api<Action>,
-) => (request: Request<Action>, next: () => Promise<any>) => Promise<any>
+export type Middleware<
+  Action extends FluxStandardRoutingAction,
+  ScrollRestorer extends BaseScrollRestorer<Action> = BaseScrollRestorer<Action>,
+> = (
+  api: Api<Action, ScrollRestorer>,
+) => (request: Request<Action, ScrollRestorer>, next: () => Promise<any>) => Promise<any>
+
+export type BaseScrollRestorer<Action extends FluxStandardRoutingAction> = {
+  saveScroll: Middleware<Action, BaseScrollRestorer<Action>>
+  restoreScroll: Middleware<Action, BaseScrollRestorer<Action>>
+  updateScroll: () => void
+}
+
+export type ScrollRestorerCreator<
+  Action extends FluxStandardRoutingAction,
+  ScrollRestorer extends BaseScrollRestorer<Action> = BaseScrollRestorer<Action>,
+> = (api: Api<Action, ScrollRestorer>) => ScrollRestorer
 
 /**
  * Options for a route, corresponding to FSRAs with a specific Redux action type
@@ -111,4 +133,9 @@ export type Route = {}
 /**
  * Global Rudy options
  */
-export type Options = {}
+export type Options<
+  Action extends FluxStandardRoutingAction,
+  ScrollRestorer extends BaseScrollRestorer<Action> = BaseScrollRestorer<Action>,
+> = {
+  makeRestoreScroll?: ScrollRestorer
+}

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1-from-git.8](https://github.com/hedgepigdaniel/rudy/compare/@respond-framework/boilerplate@0.1.1-test.4...@respond-framework/boilerplate@0.1.1-from-git.8) (2019-10-04)
+
+
+### Bug Fixes
+
+* **boilerplate:** allow scrolling the main container ([1eee48c](https://github.com/hedgepigdaniel/rudy/commit/1eee48c))
+
+
+
+
+
 ## [0.1.1-from-git.7](https://github.com/hedgepigdaniel/rudy/compare/@respond-framework/boilerplate@0.1.1-test.4...@respond-framework/boilerplate@0.1.1-from-git.7) (2019-10-04)
 
 

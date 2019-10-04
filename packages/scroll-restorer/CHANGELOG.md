@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.1.0-from-git.9 (2019-10-04)
+
+
+### Bug Fixes
+
+* update scroll-behavior with bugfix ([e16b199](https://github.com/respond-framework/rudy/tree/master/packages/scroll-restorer/commit/e16b199))
+
+
+### Features
+
+* **restore-scroll:** export ScrollPosition type ([585f4f6](https://github.com/respond-framework/rudy/tree/master/packages/scroll-restorer/commit/585f4f6))
+
+
+
+
+
 # 0.1.0-from-git.8 (2019-10-04)
 
 

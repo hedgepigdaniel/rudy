@@ -1,6 +1,6 @@
 {
   "name": "@respond-framework/types",
-  "version": "0.2.0-from-git.8",
+  "version": "0.2.0-from-git.9",
   "description": "Shared types for Rudy",
   "rudy-src-main": "src/index.ts",
   "types": "ts/index.d.ts",

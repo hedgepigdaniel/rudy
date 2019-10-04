@@ -24,5 +24,8 @@
     "is-pretty": "prettier --ignore-path=../../config/.prettierignore '**/*' --list-different",
     "prettify": "prettier --ignore-path=../../config/.prettierignore '**/*' --write",
     "lint": "eslint --config ../../.eslintrc.js --ignore-path ../../.eslintignore --ext=ts,tsx,js,jsx ."
+  },
+  "dependencies": {
+    "scroll-behavior": "git+https://github.com/hedgepigdaniel/scroll-behavior.git#feat/typescript-build"
   }
 }

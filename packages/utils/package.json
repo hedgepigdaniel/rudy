@@ -1,6 +1,6 @@
 {
   "name": "@respond-framework/utils",
-  "version": "1.0.0-from-git.3",
+  "version": "1.0.0-from-git.4",
   "description": "Shared utilities for rudy",
   "main": "cjs/index.js",
   "module": "es/index.js",

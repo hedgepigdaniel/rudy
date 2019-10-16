@@ -9106,7 +9106,7 @@ schema-utils@^2.1.0:
 
 "scroll-behavior@git+https://github.com/hedgepigdaniel/scroll-behavior.git#build/initial-typescript":
   version "0.9.10"
-  resolved "git+https://github.com/hedgepigdaniel/scroll-behavior.git#e5cbd6e906622c8c5cafb54df0868a3dd289236b"
+  resolved "git+https://github.com/hedgepigdaniel/scroll-behavior.git#298590312aec1861018171c1334393fcff9af551"
   dependencies:
     dom-helpers "^3.4.0"
     invariant "^2.2.4"

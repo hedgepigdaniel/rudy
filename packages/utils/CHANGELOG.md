@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0-from-git.0](https://github.com/respond-framework/rudy/tree/master/packages/utils/compare/@respond-framework/utils@0.1.1-test.3...@respond-framework/utils@0.2.0-from-git.0) (2020-03-25)
+
+
+### Features
+
+* fallback for missing sessionStorage ([95dc74d](https://github.com/respond-framework/rudy/tree/master/packages/utils/commit/95dc74d))
+
+
+
+
+
 ## [0.1.1-test.3](https://github.com/respond-framework/rudy/tree/master/packages/utils/compare/@respond-framework/utils@0.1.1-test.2...@respond-framework/utils@0.1.1-test.3) (2019-10-23)
 
 
